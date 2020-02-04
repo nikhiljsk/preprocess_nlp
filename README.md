@@ -5,6 +5,7 @@
 A simple framework for preprocessing of text using parallel execution by leveraging the multiprocessing library in Python. Completely written is Python code, this repo holds an easy way to preprocess text with various defined stages implemented using standardized techniques in Natural Language Processing (NLP). Contains both sequential and parallel ways for preprocessing text with an option of user-defined number of processes.
 
 Various stages of preprocessing include:
+
 | Stage                     | Description                                                                           |
 | ------------------------- |:-------------------------------------------------------------------------------------:|
 | remove_tags_nonascii      | Remove HTML tags, emails, URLs, non-ascii characters and converts accented characters |
