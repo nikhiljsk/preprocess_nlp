@@ -46,7 +46,7 @@ def preprocess_nlp(strings, stages, ind=None, return_dict=None):
     'lower_case': True,
     'expand_contractions': False, 
     'remove_punctuation': True, 
-    'remove_esacape_chars': True, 
+    'remove_escape_chars': True, 
     'remove_stopwords': False, 
     'remove_numbers': True, 
     'lemmatize': False, 
@@ -58,7 +58,7 @@ def preprocess_nlp(strings, stages, ind=None, return_dict=None):
     default_stages = {'remove_tags_nonascii': True, 
                       'lower_case': True,
                       'expand_contractions': False,
-                      'remove_esacape_chars': True,
+                      'remove_escape_chars': True,
                       'remove_punctuation': True,
                       'remove_stopwords': False,
                       'remove_numbers': True,
@@ -88,7 +88,7 @@ def preprocess_nlp(strings, stages, ind=None, return_dict=None):
             if default_stages['expand_contractions']: # Expand contractions
                 sentence = contractions.fix(sentence)
                 
-            if default_stages['remove_esacape_chars']: # Remove multiple spaces & \n etc.
+            if default_stages['remove_escape_chars']: # Remove multiple spaces & \n etc.
                 sentence = re.sub('\s+', ' ', sentence)
                 
             if default_stages['remove_punctuation']: # Remove all punctuations
@@ -158,7 +158,7 @@ def async_call_preprocess(strings, stages, n_processes=3):
      'lower_case': True,
      'expand_contractions': False, 
      'remove_punctuation': True, 
-     'remove_esacape_chars': True, 
+     'remove_escape_chars': True, 
      'remove_stopwords': False, 
      'remove_numbers': True, 
      'lemmatize': False, 
