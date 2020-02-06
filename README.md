@@ -2,7 +2,7 @@
 
 ## Framework Description
 
-A simple framework for preprocessing of text using parallel execution by leveraging the multiprocessing library in Python. Completely written is Python code, this repo holds an easy way to preprocess text with various defined stages implemented using standardized techniques in Natural Language Processing (NLP). Contains both sequential and parallel ways for preprocessing text with an option of user-defined number of processes.
+A simple framework for preprocessing or cleaning of text using parallel execution by leveraging the multiprocessing library in Python. Completely written is Python code, this repo holds an easy way to preprocess text with various defined stages implemented using standardized techniques in Natural Language Processing (NLP). Contains both sequential and parallel ways for preprocessing text with an option of user-defined number of processes.
 
 Various stages of preprocessing include:
 
@@ -43,6 +43,9 @@ There is a single python code file which defines both sequential and parallel wa
 <br>
 
 ---
+### Future Updates
+* Feature extractions like Nouns, Verbs, Adjectives, Numbers, Noun Phrases, NERs, Keywords
+* Vectorization tools like TF-IDF, GloVe, Word2Vec, Bag of Words
 
 *Refer the code for Docstrings and other function related documentation.* 
 <br>
