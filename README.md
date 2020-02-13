@@ -2,7 +2,7 @@
 
 ## Framework Description
 
-A simple framework for preprocessing or cleaning of text using parallel execution by leveraging the multiprocessing library in Python. Completely written is Python code, this repo holds an easy way to preprocess text with various defined stages implemented using standardized techniques in Natural Language Processing (NLP). Contains both sequential and parallel ways for preprocessing text with an option of user-defined number of processes.
+A simple framework for preprocessing or cleaning of text using parallel execution by leveraging the multiprocessing library in Python. Completely written is Python code, this repo holds an easy way to preprocess text with various defined stages implemented using standardized techniques in Natural Language Processing (NLP). Contains both sequential and parallel ways for preprocessing text with an option of user-defined number of processes. Also, added a module which can be used to find the top words in the corpus, lets you choose a threshold to consider the words that can stay in the corpus and replaces the others, A simple way to reduce vocabulary size decreasing input vector size for deep learning models. Includes support for both parallel and sequential.
 
 Various stages of preprocessing include:
 
@@ -23,16 +23,19 @@ Various stages of preprocessing include:
 
 ## Code - Components
 
-There is a single python code file which defines both sequential and parallel ways of code execution for preprocessing.
+Various Python files and there purpose mentioned here:
 
-* [`preprocess_nlp.py`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess_nlp.py)                       - Contains functions which are built around existing techniques for preprocessing text. Defines both sequential and parallel ways of code execution for preprocessing.
-* [`Preprocessing_Example_Notebook.ipynb`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/Preprocessing_Example_Notebook.ipynb)    - How-to-use example notebook
+* [`preprocess_nlp.py`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess_nlp.py)                       - Contains functions which are built around existing techniques for preprocessing or cleaning text. Defines both sequential and parallel ways of code execution for preprocessing.
+* [`Preprocessing_Example_Notebook.ipynb`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/Preprocessing_Example_Notebook.ipynb)    - How-to-use example notebook for preprocessing or cleaning stages
 * [`requirements.txt`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/requirements.txt)                        - Required libraries to run the project
+* [`vocab_elimination_nlp.py`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/vocab_elimination_nlp.py) - Contains functions which are built around existing techniques for shortlisting top words and reducing vocab size
+* [`Vocab_Elimination_Example_Notebook.ipynb`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/Vocab_Elimination_Example_Notebook.ipynb) - How-to-use example notebook for vocabulary reduction/elimination or replacement.
 
 ## How to run
 
 1. pip install -r requirements.txt
 2. Import [`preprocess_nlp.py`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess_nlp.py) and use the functions [`preprocess_nlp`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess_nlp.py#L34)(for sequential) and [`asyn_call_preprocess`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess_nlp.py#L149)(for parallel) as defined in notebook
+3. Import [`vocab_elimination_nlp.py`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/vocab_elimination_nlp.py) and use functions as defined in the python file. 
 
 ---
 
