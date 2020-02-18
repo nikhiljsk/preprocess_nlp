@@ -179,11 +179,11 @@ def get_features(docs, stages={}, ind=None, send_end=None):
     default_stages = {
         'nouns': True,
         'verbs': True,
-        'adjs': True,
-        'noun_phrases': True,
-        'keywords': True,
-        'ner': True,
-        'numbers': True,
+        'adjs': False,
+        'noun_phrases': False,
+        'keywords': False,
+        'ner': False,
+        'numbers': False,
     }
     default_stages.update(stages)
 
