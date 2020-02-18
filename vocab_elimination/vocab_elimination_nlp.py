@@ -9,7 +9,7 @@ from IPython.display import clear_output
 
 def calculate_ranges(a, b):
     """
-    Helper function for async_call_preprocess to equally divide the number of strings between multiple threads/processes.
+    Helper function for async_call_vocab_elimination to equally divide the number of strings between multiple threads/processes.
     
     :param a: type(int)
     :param b: type(int)
@@ -90,9 +90,11 @@ def vocab_elimination(strings, short_words, replace_with='<unk>', ind=None, retu
     
     <Returns replaced strings>
     """
+    # Initialization
     short_words = set(short_words)
     final_sent = list()
     
+    # Iterate over each string and replace words that are not shortlisted
     for i, paragraph in enumerate(strings):
         t = list()
         for sentence in paragraph.split(' . '):
@@ -105,12 +107,16 @@ def vocab_elimination(strings, short_words, replace_with='<unk>', ind=None, retu
             t.append(' '.join(temp))
         final_sent.append(' . '.join(t))
         
+        # Print the progress
         if (i+1)%1000==0:
             clear_output(wait=True)
             print('Processing done till: ', i+1, '/', len(strings), sep='', flush=True)
+            
+    # If called directly/Sequential
     if ind == None:
         return final_sent
     
+    # If called asynchronously
     return_dict[ind] = final_sent
     
 
