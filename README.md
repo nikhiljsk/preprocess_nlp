@@ -7,7 +7,9 @@ A simple and fast framework for
 * Feature Extraction
 * Word Vectorization
 
-Uses parallel execution by leveraging the [multiprocessing library](https://docs.python.org/3.6/library/multiprocessing.html) in Python for cleaning of text, extracting top words and feature extraction modules. Contains both sequential and parallel ways (For less CPU intensive processes) for preprocessing text with an option of user-defined number of processes.
+Uses parallel execution by leveraging the [multiprocessing library](https://docs.python.org/3.6/library/multiprocessing.html) in Python for <u>cleaning of text</u>, <u>extracting top words</u> and <u>feature extraction</u> modules. Contains both sequential and parallel ways (For less CPU intensive processes) for preprocessing text with an option of user-defined number of processes.
+
+<small>*PS: There is no multi-processing support for word vectorization*</small>
 
 * `Cleaning Text` - Clean text with various defined stages implemented using standardized techniques in Natural Language Processing (NLP)
 * `Vocab Reduction` - Find the top words in the corpus, lets you choose a threshold to consider the words that can stay in the corpus and replaces the others
