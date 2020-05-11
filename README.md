@@ -7,6 +7,8 @@ A simple and fast framework for
 * Feature Extraction
 * Word Vectorization
 
+> Update: Published the package in PyPI. Install it using pip.
+
 Uses parallel execution by leveraging the [multiprocessing library](https://docs.python.org/3.6/library/multiprocessing.html) in Python for cleaning of text, extracting top words and feature extraction modules. Contains both sequential and parallel ways (For less CPU intensive processes) for preprocessing text with an option of user-defined number of processes.
 
 > *PS: There is no multi-processing support for word vectorization*
@@ -67,6 +69,11 @@ Various Python files and their purposes are mentioned here:
 * [`vectorization_nlp.py`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/vectorization/vectorization_nlp.py) - Contains functions which are built around existing techniques for vectorizing words.
 * [`Vectorization_Example_Notebook.ipynb`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/vectorization/Vectorization_Example_Notebook.ipynb) - How-to-use example notebook for vectorization of words and additional functions or features. 
 ---
+### How to run - Using pip
+1. pip install -r requirements.txt
+2. pip install preprocess-nlp
+3. Import functions and start using
+
 ### How to run
 1. pip install -r requirements.txt
 2. Import [`preprocess_nlp.py`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess/preprocess_nlp.py) and use the functions [`preprocess_nlp`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess/preprocess_nlp.py#L34)(for sequential) and [`asyn_call_preprocess`](https://github.com/nikhiljsk/preprocess_nlp/blob/master/preprocess/preprocess_nlp.py#L149)(for parallel) as defined in notebook
