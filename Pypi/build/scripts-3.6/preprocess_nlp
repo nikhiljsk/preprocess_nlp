@@ -1,0 +1,3 @@
+#!python
+
+echo "My first pip package"
